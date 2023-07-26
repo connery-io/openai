@@ -40,7 +40,7 @@ async function handler({ inputParameters, configurationParameters }) {
   const openai = new OpenAIApi(configuration);
 
   const completion = await openai.createChatCompletion({
-    model: "gpt-4",
+    model: configurationParameters.OpenAiModel,
     messages: [{ role: "user", content: inputParameters.UserPrompt }],
   });
 

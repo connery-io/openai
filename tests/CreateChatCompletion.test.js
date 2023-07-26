@@ -24,10 +24,10 @@ jest.mock('openai', () => {
     };
 });
 
-it('should initialize OpenAI with the provided API key', async () => {
-    const inputParameters = { UserPrompt: 'Hello' };
-    const configurationParameters = { OpenAiApiKey: 'test-key' };
+const inputParameters = { UserPrompt: 'Hello' };
+const configurationParameters = { OpenAiApiKey: 'test-key', OpenAiModel: 'gpt-4' };
 
+it('should initialize OpenAI with the provided API key', async () => {
     await CreateChatCompletion.operation.handler({ inputParameters, configurationParameters });
 
     expect(Configuration).toHaveBeenCalledWith({
@@ -36,9 +36,6 @@ it('should initialize OpenAI with the provided API key', async () => {
 });
 
 it('should call createChatCompletion with the correct parameters', async () => {
-    const inputParameters = { UserPrompt: 'Hello' };
-    const configurationParameters = { OpenAiApiKey: 'test-key' };
-
     await CreateChatCompletion.operation.handler({ inputParameters, configurationParameters });
 
     expect(OpenAIApi().createChatCompletion).toHaveBeenCalledWith({
@@ -48,9 +45,6 @@ it('should call createChatCompletion with the correct parameters', async () => {
 });
 
 it('should return the completion result', async () => {
-    const inputParameters = { UserPrompt: 'Hello' };
-    const configurationParameters = { OpenAiApiKey: 'test-key' };
-
     const result = await CreateChatCompletion.operation.handler({ inputParameters, configurationParameters });
 
     expect(result).toEqual({
