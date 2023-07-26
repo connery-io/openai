@@ -1,0 +1,18 @@
+const CreateChatCompletion = require('../actions/CreateChatCompletion');
+
+// NOTE: You don't need to test whether the input parameters are provided and valid. 
+// Connery Runner will handle that based on your action definition.
+// So you only need to test the logic of your action here.
+
+// TODO: Rename the test suite below to match your use case.
+it('should verify if the CreateChatCompletion action works as expected', async () => {
+    // arrange
+    const inputParameters = {}; // TODO: Specify the input parameters here.
+
+    // act
+    const result = await CreateChatCompletion.operation.handler({ inputParameters });
+
+    // assert
+    // TODO: Uncomment the line below and specify the output parameter you want to test and the expected value.
+    // expect(...).toBe(...);
+});
