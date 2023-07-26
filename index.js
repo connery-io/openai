@@ -30,5 +30,8 @@ module.exports = {
             name: 'Connery',
             email: 'contact@connery.io',
         }
-    ]
+    ],
+    connery: {
+        runnerVersion: '1',
+    }
 };
