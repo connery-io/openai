@@ -1,1 +1,3 @@
-# open-ai
+# OpenAI
+
+OpenAI connector for Connery
