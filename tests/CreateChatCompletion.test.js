@@ -39,7 +39,7 @@ it('should call createChatCompletion with the correct parameters', async () => {
     await CreateChatCompletion.operation.handler({ inputParameters, configurationParameters });
 
     expect(OpenAIApi().createChatCompletion).toHaveBeenCalledWith({
-        model: 'gpt-4',
+        model: configurationParameters.OpenAiModel,
         messages: [{ role: 'user', content: inputParameters.UserPrompt }]
     });
 });
