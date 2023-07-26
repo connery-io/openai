@@ -6,7 +6,9 @@
     "name": "Connery",
     "email": "contact@connery.io"
   },
-  "dependencies": {},
+  "dependencies": {
+    "openai": "^3.3.0"
+  },
   "devDependencies": {
     "connery": "*",
     "jest": "^29.6.1"
