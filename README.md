@@ -1,6 +1,12 @@
-# OpenAI
+# Connery Runner Administration
 
-OpenAI connector for Connery.
+This connector provides actions to manage the Connery Runner service.
+
+## Available actions
+
+| Action                                                       | Description                                            |
+| ------------------------------------------------------------ | ------------------------------------------------------ |
+| [Create prompt completion](/actions/CreateChatCompletion.js) | Creates an OpenAI model response for the given prompt. |
 
 ## Repository structure
 
@@ -11,7 +17,7 @@ The `./actions/` folder contains all the actions this connector defines.
 Every action is represented by a separate file with the action definition and implementation.
 
 The `./dist/connector.js` file is the compiled version of the connector with all the dependencies.
-Connery runner uses this file to run the connector.
+Connery Runner uses this file to run the connector.
 
 ## Connery
 
